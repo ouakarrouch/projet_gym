@@ -3,7 +3,7 @@ import React from 'react'
 const ExirciseDetail = () => {
   return (
     <div>
-      exercise
+      exercise 
     </div>
   )
 }
