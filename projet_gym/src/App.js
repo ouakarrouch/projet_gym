@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import ExirciseDetail from './pages/ExirciseDetail';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import SearchExercises from './components/SearchExercises'
 
 const App = () => {
   return (
