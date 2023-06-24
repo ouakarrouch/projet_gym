@@ -1,9 +1,9 @@
-
+import {REACT_APP_RAPID_API_KEY} from '../config'
 export const exerciseOptions = {
   
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': 'ad49f28de7msha5ccae1ec0082b1p17c0dejsn44bdd6187b3e',
+    'X-RapidAPI-Key': REACT_APP_RAPID_API_KEY,
     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
   }
 };

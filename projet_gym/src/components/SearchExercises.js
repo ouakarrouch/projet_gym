@@ -19,32 +19,19 @@ const SearchExercises = () => {
       
       },[]
       
-      
-      
-      
-      
       )
-
-
-
         const handlesearch = async () => {
-                   if(search){ 
-    
-              
-              const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions)
-        
-              const SearchedExercises = exercisesData.filter(
-              (exercise) => exercise.name.toLowerCase().include(search)
-                   || exercise.target.toLowerCase().include(search)
-                   || exercise.equipment.toLowerCase().include(search)
-                   || exercise.bodyPart.toLowerCase().include(search)
-              
-              
+                   if(search){        
+          const exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions)
+      
+         const SearchedExercises = exercisesData.filter(
+              (exercise) => exercise.name.toLowerCase().includes(search)
+                   || exercise.target.toLowerCase().includes(search)
+                   || exercise.equipment.toLowerCase().includes(search)
+                   || exercise.bodyPart.toLowerCase().includes(search)        
                    );
-
                 setsearch('');
-                setExercise(SearchedExercises);   
-  
+                setExercise(SearchedExercises);
   }  
 }
   return (
@@ -105,7 +92,7 @@ onClick={handlesearch}
 >Search</Button>
        </Box>
        <Box sx={{ position: 'relative', width: '100%', p: '20px' }}>
-        <HorizontalScrollbar data={bodyParts} bodyParts setBodyPart={setBodyPart} bodyPart={bodyPart} />
+        <HorizontalScrollbar data={bodyParts} bodyParts setBodyPart={setBodyParts} bodyPart={bodyParts} />
       </Box>
 
 
